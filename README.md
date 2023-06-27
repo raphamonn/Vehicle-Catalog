@@ -1,5 +1,5 @@
-# django-project1
-Site teste feito em Django a fim de entender melhor como funciona o Framework
+# Vehicles
+catálogo de veículos automotivos feito em django para testar o framework
 
 Libs: <br>
 asgiref==3.7.2 <br> 
