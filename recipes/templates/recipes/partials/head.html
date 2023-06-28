@@ -71,8 +71,8 @@
     }
 
     * {
-      padding: 0;
-      margin: 0;
+      padding: 0px;
+      margin: 0px;
     }
 
     html {
@@ -259,6 +259,25 @@
 
     .recipe-footer a:hover {
       filter: brightness(2);
+    }
+
+    .main-footer {
+      display: flex;
+      padding: var(--spacing-gutter-large);
+      background: var(--color-primary-dark);
+      align-items: center;
+      margin-top: 10rem;
+      justify-content: space-between;
+    }
+
+    .main-footer a {
+      color: var(--color-white);
+      text-decoration: none;
+
+    }
+
+    .main-footer a:hover {
+      filter: brightness(.8);
     }
   </style>
 </head>
