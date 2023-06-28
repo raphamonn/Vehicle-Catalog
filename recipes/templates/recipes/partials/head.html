@@ -186,10 +186,14 @@
 
     .recipe img {
       max-width: 100%;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+
     }
 
     .recipe-list-item {
       max-width: 64rem;
+      border-radius: 2rem;
     }
 
     .recipe-list-item:hover {
@@ -224,8 +228,13 @@
 
     .recipe-author a:hover {
       color: var(--color-primary-dark);
+    }
 
-
+    .hover_img :hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none;
     }
   </style>
 </head>
