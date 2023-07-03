@@ -175,6 +175,12 @@ h6 {
 .recipe-title-container {
   padding: var(--spacing-gutter-medium);
   padding-bottom: 2rem;
+  text-decoration:none;
+}
+
+.recipe-title-container a{
+  text-decoration: none;
+  color: var(--color-primary-dark);
 }
 
 .recipe-author {
@@ -243,6 +249,10 @@ h6 {
 .main-content-detail .recipe-list-item:hover {
   transform: scale(1);
   box-shadow: -5px 5px 10px rgba(0, 0, 0, .2);
+}
+
+.vehicle-description{
+  padding: var(--spacing-gutter-medium)
 }
 
 .main-footer {
