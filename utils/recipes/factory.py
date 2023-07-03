@@ -16,11 +16,11 @@ def make_recipe():
     return {
         'title': fake.sentence(nb_words=6),
         'description': fake.sentence(nb_words=12),
-        'year': fake.random_number(digits=4, fix_len=True),
+        'year': fake.random_number(fix_len=True, digits=4),
         'year_time_unit': 'Ano',
         'kilometers': fake.random_number(digits=6, fix_len=True),
         'kilometers_unit': 'Quilometros',
-        'preparation_steps': fake.text(3000),
+        'vehicle_description': fake.text(3000),
         'created_at': fake.date_time(),
         'author': {
             'first_name': fake.first_name(),
