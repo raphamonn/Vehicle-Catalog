@@ -20,7 +20,7 @@ def make_recipe():
         'year': fake.random_number(fix_len=True, digits=4),
         'year_time_unit': 'Ano',
         'kilometers': fake.random_number(digits=6, fix_len=True),
-        'kilometers_unit': 'Quilometros',
+        'kilometers_unit': 'Quilometragem',
         'vehicle_description': fake.text(3000),
         'created_at': fake.date_time(),
         'author': {
