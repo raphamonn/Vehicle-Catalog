@@ -5,7 +5,9 @@ Todos os arquivos necessários para executar o site em um servidor estão dispon
 arquivo **requirements.txt**.  
 
 basta executar o seguinte código dentro do terminal:
-> pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 Para executar o site localmente, execute o comando:
 > python manage.py runserver localhost:5000
