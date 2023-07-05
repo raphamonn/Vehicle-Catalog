@@ -17,20 +17,26 @@
           
           <span class="vehicle-author-item">
               <i class="fas fa-user"></i>
-              {{ vehicle.author.first_name }} {{ vehicle.author.last_name }}
+              {% if vehicle.author.first_name%}
+              {{ vehicle.author.first_name }} {{ vehicle.author.last_name }} 
+              {% else %}
+              {{vehicle.author.username}}
+              {% endif %}
+              
+
           </span>
           
           <span class="vehicle-author-item">
               <i class="fas fa-calendar-alt"></i>
               {{vehicle.created_at|date:"d-m-Y"}} às {{vehicle.created_at|date:"H:i"}}
           </span>
-
+            {% if vehicle.category.id is not None%}
           <span class="vehicle-author-item">
-              <a href="/vehicles/category/cafe-da-manha/">
+              <a href="{% url 'vehicles:category' vehicle.category.id %}">
                   <i class="fas fa-layer-group"></i>  
                   <span>{{vehicle.category.name}}</span>
               </a>
-
+            {% endif %}
           </span>
       </div>
       

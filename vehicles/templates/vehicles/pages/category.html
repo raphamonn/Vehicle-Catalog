@@ -1,0 +1,12 @@
+{%extends 'global/base.html'%}
+
+{% block title %}Category | {% endblock title %}
+{% block content %}
+  <main class="main-content-container">
+    <div class="main-content main-content-list container ">
+      {% for vehicle in vehicles %}
+        {% include 'vehicles/partials/vehicle.html' %}
+      {% endfor %}
+    </div>
+
+{% endblock content %}
