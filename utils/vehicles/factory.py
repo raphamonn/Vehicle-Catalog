@@ -12,7 +12,7 @@ fake = Faker('pt_BR')
 # print(signature(fake.random_number))
 
 
-def make_recipe():
+def make_vehicle():
     return {
         'id': fake.random_number(digits=6, fix_len=True),
         'title': fake.sentence(nb_words=6),
@@ -38,4 +38,4 @@ def make_recipe():
 
 if __name__ == '__main__':
     from pprint import pprint
-    pprint(make_recipe())
+    pprint(make_vehicle())
