@@ -14,15 +14,19 @@
         </div>
 
         <div class="vehicle-author">
-          
-          <span class="vehicle-author-item">
-              <i class="fas fa-user"></i>
-              {% if vehicle.author.first_name%}
-              {{ vehicle.author.first_name }} {{ vehicle.author.last_name }} 
-              {% else %}
-              {{vehicle.author.username}}
-              {% endif %}
-              
+            
+            <span class="vehicle-author-item">
+                    <i class="fas fa-user"></i>
+                {% if vehicle.author is not None %}
+                    {% if vehicle.author.first_name%}
+                        {{ vehicle.author.first_name }} {{ vehicle.author.last_name }} 
+                    {% else %}
+                        {{vehicle.author.username}}                
+                    {% endif %}  
+                {% else %}
+                
+                {% endif %}
+       
 
           </span>
           
