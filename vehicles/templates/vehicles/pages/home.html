@@ -4,9 +4,13 @@
 {% block content %}
   <main class="main-content-container">
     <div class="main-content main-content-list container ">
-      {% for vehicle in vehicles %}
-      {% include 'vehicles/partials/vehicle.html' %}
-      {% endfor %}
+    {% for vehicle in vehicles %}
+        {% include 'vehicles/partials/vehicle.html' %}
+    {% empty %} 
+    <div class="center">
+      <h1>Sem veículos para exibir</h1>
+    </div>
+    {% endfor %}
     </div>
 
 {% endblock content %}

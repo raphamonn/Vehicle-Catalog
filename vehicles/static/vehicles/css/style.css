@@ -184,12 +184,13 @@ h6 {
 }
 
 .vehicle-author {
+  margin-bottom: 2.5rem;
   padding: 0 var(--spacing-gutter-medium);
 }
 
 .vehicle-content {
   padding: var(--spacing-gutter-medium);
-  padding-top: 2rem;
+  padding-top: 0rem;
 }
 
 .vehicle-author-item {
@@ -273,4 +274,27 @@ h6 {
 .main-footer a:hover {
   filter: brightness(.8);
 }
+
+.center{
+  padding: 25rem 0 36rem 0;
+  text-align: center;
+}
+
+.vehicle-description h1,
+.vehicle-description h2,
+.vehicle-description h3,
+.vehicle-description h4,
+.vehicle-description h5,
+.vehicle-description h6,
+.vehicle-description p,
+.vehicle-description pre {
+  margin: 2rem 0;
+}
+
+.vehicle-description ol,
+.vehicle-description ul{
+  margin: 2rem;
+  padding: 0 2rem;
+}
+
 

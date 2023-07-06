@@ -44,9 +44,12 @@
           </span>
       </div>
       
+      {% if is_detail_page is not True %}
       <div class="vehicle-content">
         <p>{{vehicle.description}}</p>
       </div> 
+      {% endif %}
+
       <div class="vehicle-meta-container">
         <div class="vehicle-meta vehicle-preparation">
             <h3 class="vehicle-meta-title"><i class="fa-solid fa-car-side"></i> {{vehicle.year_time_unit}}</h3>
@@ -72,11 +75,13 @@
     {% endif %}
 
     {% if is_detail_page is True %}
-    <div class="vehicle-description">
-        {{vehicle.vehicle_description|linebreaksbr}}
-    </div>
+        <div class="vehicle-description">    
+        {% if vehicle.vehicle_description_is_html is True %}
+            {{vehicle.vehicle_description|safe}}
+        {% else %}
+            {{vehicle.vehicle_description|linebreaksbr}}
+        {% endif %}
+        </div>
     {% endif %}
-
-
   </div>
   

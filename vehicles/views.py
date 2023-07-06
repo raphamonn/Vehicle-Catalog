@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_list_or_404
+from django.shortcuts import render, get_list_or_404, get_object_or_404
 from utils.vehicles.factory import make_vehicle
 from vehicles.models import Vehicle
 
@@ -26,11 +26,7 @@ def category(request, category_id):
 
 
 def vehicle(request, id):
-
-    vehicle = Vehicle.objects.filter(
-        pk=id,
-        is_published=True
-    ).order_by('-id').first()
+    vehicle = get_object_or_404(Vehicle, pk=id, is_published=True)
 
     return render(request, 'vehicles/pages/vehicle_view.html', context={
         'vehicle': vehicle,
