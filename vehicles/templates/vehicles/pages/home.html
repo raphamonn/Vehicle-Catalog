@@ -7,7 +7,8 @@
     {% for vehicle in vehicles %}
         {% include 'vehicles/partials/vehicle.html' %}
     {% empty %} 
-    <div class="center">
+
+    <div class="center m-y">
       <h1>Sem veículos para exibir</h1>
     </div>
     {% endfor %}
